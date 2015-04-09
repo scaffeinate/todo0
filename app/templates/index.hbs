@@ -2,23 +2,30 @@
 	<div class="col-lg-6 col-lg-offset-3">
 		{{partial 'partials/todo-form'}}
 		<div class="row">
-			<div class="col-xs-8">
+			<div class="col-xs-10">
 				<h2><b>To Dos</b></h2>
-				<ul>
-					{{#each todo in model}}
+				<ul id="todos">
+					{{#each todo in model itemController='todo'}}
 						<li>
+							{{#if todo.isEditing}}
+								{{partial 'partials/edit-todo'}}
+							{{else}}
 							<h4>
-								{{#if todo.completed}}
-									<strike>{{todo.task}}</strike>
+								{{#if todo.model.completed}}
+									<strike>{{todo.model.task}}</strike>
 								{{else}}
-									{{todo.task}}
+									{{todo.model.task}}
 								{{/if}}
 								<div class="actions">
+									<a {{action 'editTodo'}} href class="edit-todo">
+										<span class="glyphicon glyphicon-pencil"></span>
+									</a>
 									<a {{action 'removeTodo' todo}} href class="remove-todo">
 										<span class="glyphicon glyphicon-remove"></span>
 									</a>
 								</div>
 							</h4>
+							{{/if}}
 						</li>
 					{{/each}}
 				</ul>

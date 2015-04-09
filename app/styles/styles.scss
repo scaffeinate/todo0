@@ -16,14 +16,30 @@ body {
 }
 
 .form-inline .form-group input {
-  width: 300px;
+  width: 250px;
+}
+
+#todos {
+	margin-top: 25px;
+}
+
+#todos li {
+	margin-top: 15px;
 }
 
 .actions {
 	float: right;
+	a {
+		margin-left: 10px;
+	}
 }
 
 .remove-todo {
 	color: red;
 	font-size: 1.25rem;
+}
+
+.edit-todo {
+	color: #555;
+	font-size: 1.2rem;
 }

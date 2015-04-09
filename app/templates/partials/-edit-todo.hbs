@@ -1,0 +1,7 @@
+<form class="form-inline">
+	<div class="form-group">
+		{{input type='text' placeholder='Task name' value=todo.model.task class='form-control'}}
+	</div>
+	<button {{action 'updateTodo'}} class="btn btn-primary" {{bind-attr disabled=todo.state}}>update</button>
+	<button {{action 'cancel'}} class="btn btn-default">cancel</button>
+</form>
