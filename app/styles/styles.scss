@@ -18,3 +18,12 @@ body {
 .form-inline .form-group input {
   width: 300px;
 }
+
+.actions {
+	float: right;
+}
+
+.remove-todo {
+	color: red;
+	font-size: 1.25rem;
+}

@@ -14,7 +14,12 @@ export default Ember.Controller.extend({
 			});
 			todo.save().then(function() {
 				_this.set('newTask', '');
+				_this.notify.success('created new task');
 			});
+		},
+		removeTodo: function(todo) {
+			todo.destroyRecord();
+			this.notify.alert('removed task');
 		}
 	}
 });
