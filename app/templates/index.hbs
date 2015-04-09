@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="col-lg-6 col-lg-offset-3">
+		<h2><b>To Dos</b></h2>
+		<ul>
+			{{#each todo in todos}}
+				<li>{{todo.task}}</li>
+				<li>{{todo.completed}}</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>
