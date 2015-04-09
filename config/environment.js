@@ -4,6 +4,13 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'todo0',
     environment: environment,
+    contentSecurityPolicy: { 
+      'connect-src': "'self' wss://*.firebaseio.com",
+      'font-src': "'self' http://fonts.gstatic.com",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
+      'media-src': "'self'"
+    },
+    firebase: 'https://todo0.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
