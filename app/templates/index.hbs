@@ -10,20 +10,22 @@
 							{{#if todo.isEditing}}
 								{{partial 'partials/edit-todo'}}
 							{{else}}
-							<h4 {{bind-attr class="todo.completed:strike"}}>
-								{{input type="checkbox" checked=todo.completed class="toggle"}}
-								{{todo.model.task}}
-								<div class="actions">
-									<a {{action 'editTodo'}} href class="edit-todo">
-										<span class="glyphicon glyphicon-pencil"></span>
-									</a>
-									<a {{action 'removeTodo' todo}} href class="remove-todo">
-										<span class="glyphicon glyphicon-remove"></span>
-									</a>
-								</div>
-							</h4>
+								<h4 {{bind-attr class="todo.completed:strike"}}>
+									{{input type="checkbox" checked=todo.completed class="toggle"}}
+									{{todo.model.task}}
+									<div class="actions">
+										<a {{action 'editTodo'}} href class="edit-todo">
+											<span class="glyphicon glyphicon-pencil"></span>
+										</a>
+										<a {{action 'removeTodo' todo}} href class="remove-todo">
+											<span class="glyphicon glyphicon-remove"></span>
+										</a>
+									</div>
+								</h4>
 							{{/if}}
 						</li>
+					{{else}}
+						<h4>No Tasks to do</h4>
 					{{/each}}
 				</ul>
 			</div>

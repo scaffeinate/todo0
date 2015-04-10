@@ -7,11 +7,16 @@ export default Ember.Controller.extend({
 	}.property('model.task'),
 	completed: function(key, value) {
 		var todo = this.get('model');
+		var _this = this;
 		if(value === undefined) {
 			return todo.get('completed');
 		} else {
 			todo.set('completed', value);
-			todo.save();
+			todo.save().then(function(){
+				if(value) {
+					_this.notify.info('task ' + todo.get('task') + ' completed');
+				}
+			});
 			return value;
 		}
 	}.property('model.completed'),
