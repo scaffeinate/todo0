@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h4><b>To Dos</b></h4>
+		<ul id="todos">
+			{{#each todo in model itemController='todo'}}
+				<li>
+					{{#if todo.isEditing}}
+						{{partial 'partials/edit-todo'}}
+					{{else}}
+						<h4 {{bind-attr class="todo.completed:strike"}}>
+							{{input type="checkbox" checked=todo.completed class="toggle"}}
+							{{todo.model.task}}
+							<div class="actions">
+								<a {{action 'editTodo'}} href class="edit-todo">
+									<span class="glyphicon glyphicon-pencil"></span>
+								</a>
+								<a {{action 'removeTodo' todo}} href class="remove-todo">
+									<span class="glyphicon glyphicon-remove"></span>
+								</a>
+							</div>
+						</h4>
+					{{/if}}
+				</li>
+				<hr>
+			{{else}}
+				<h4>No Tasks to do</h4>
+			{{/each}}
+		</ul>
+	</div>
+</div>

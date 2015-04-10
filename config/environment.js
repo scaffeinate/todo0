@@ -6,9 +6,10 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: { 
       'connect-src': "'self' wss://*.firebaseio.com",
-      'font-src': "'self' http://fonts.gstatic.com",
-      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
-      'media-src': "'self'"
+      'font-src': "'self' https://fonts.gstatic.com",
+      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      'media-src': "'self'",
+      'img-src': "'self' https://camo.githubusercontent.com"
     },
     firebase: 'https://todo0.firebaseio.com/',
     baseURL: '/',
