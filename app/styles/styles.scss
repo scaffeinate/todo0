@@ -2,17 +2,17 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:700);
 
 body {
-	font-family: 'Quicksand', sans-serif;
-	padding-top: 70px;
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 70px;
 }
 
 .navbar-brand {
-	font-weight: 700;
-	color: white !important;
+  font-weight: 700;
+  color: white !important;
 }
 
 .navbar {
-	background: #e1563f top center;
+  background: #e1563f top center;
 }
 
 .form-inline .form-group input {
@@ -20,30 +20,30 @@ body {
 }
 
 #todos {
-	margin-top: 25px;
+  margin-top: 25px;
 }
 
 #todos li {
-	margin-top: 15px;
+  margin-top: 15px;
 }
 
 .actions {
-	float: right;
-	a {
-		margin-left: 10px;
-	}
+  float: right;
+  a {
+    margin-left: 10px;
+  }
 }
 
 .remove-todo {
-	color: red;
-	font-size: 1.25rem;
+  color: red;
+  font-size: 1.25rem;
 }
 
 .edit-todo {
-	color: #555;
-	font-size: 1.2rem;
+  color: #555;
+  font-size: 1.2rem;
 }
 
 .strike {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
