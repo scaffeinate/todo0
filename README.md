@@ -2,6 +2,9 @@
 
 A simple Todo app built using Ember.js & Firebase using the EmberFire adapter. EmberFire is the officially supported adapter for using Firebase with Ember Data, a library developed and maintained by the Ember Core Team for managing model data in your Ember apps. Checkout https://www.firebase.com/docs/web/libraries/ember/guide.html
 
+## Blog post 
+Checkout the step by step tutorial [http://sudharti.github.io/articles/ember-todo-firebase/](http://sudharti.github.io/articles/ember-todo-firebase/)
+
 ## Demo 
 https://todo0.firebaseapp.com/
 
